@@ -18,8 +18,17 @@ img {
 }
 
 .card {
-  width: 288px;
+  width: 600px;
   margin: 10px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-around;
 }
 
 .card-text {
@@ -30,6 +39,7 @@ img {
 .card-img {
   display: block;
   justify-content: center;
+  width: 288px;
 }
 
 .search-form {

@@ -4,6 +4,9 @@ import countryTpl from './templates/country-card.hbs';
 import countryListTpl from './templates/list-of-countries.hbs';
 import API from './js/fetchCountries';
 import getRefs from './js/refs';
+import { alert, defaultModules } from '@pnotify/core';
+import '@pnotify/core/dist/PNotify.css';
+import '@pnotify/core/dist/BrightTheme.css';
 
 const refs = getRefs();
 
@@ -26,7 +29,7 @@ function renderCountryCard(country) {
   if (country.length === 1) {
     refs.cardContainer.innerHTML = markup;
   } else if (country.length > 10) {
-    alert('Too many matches found. Please enter a more specific query.');
+    alert('Too many matches found. Please enter a more specific query!');
   } else {
     refs.cardContainer.innerHTML = listOfCountries;
   }
@@ -35,6 +38,3 @@ function renderCountryCard(country) {
 function onFetchError(error) {
   alert('There is no such country');
 }
-
-// плагін pnotify, встановити та розібратись, як працює
-// прописати стилі для більш-менш пристойного вигляду
